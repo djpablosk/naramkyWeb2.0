@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Handmade Bracelets — Ručne vyrobené náramky</title>
+<meta name="description" content="Ručne vyrobené náramky s vlastným príbehom. Minerálne, korálkové a párové kúsky, prispôsobené na mieru. Objednávky priamo cez Facebook a Messenger.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#hlavny-obsah">Preskočiť na obsah</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="#hero" class="brand">Handmade<br class="brand-break">Bracelets</a>
+
+    <nav class="primary-nav" aria-label="Hlavná navigácia">
+      <a href="#kolekcia">Kolekcia</a>
+      <a href="#o-nas">O nás</a>
+      <a href="#ako-objednat">Ako objednať</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#" class="nav-fb" data-fb-link>Facebook</a>
+    </nav>
+
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Otvoriť menu">
+      <span class="menu-toggle-bar"></span>
+      <span class="menu-toggle-bar"></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <nav aria-label="Mobilná navigácia">
+    <a href="#kolekcia">Kolekcia</a>
+    <a href="#o-nas">O nás</a>
+    <a href="#ako-objednat">Ako objednať</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="#" data-fb-link>Facebook</a>
+  </nav>
+</div>
+
+<main id="hlavny-obsah">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <span class="deco deco-star" aria-hidden="true">★</span>
+    <span class="deco deco-star deco-star-2" aria-hidden="true">✦</span>
+    <span class="deco deco-ring" aria-hidden="true"></span>
+    <span class="deco deco-dot" aria-hidden="true"></span>
+    <div class="hero-text">
+      <p class="eyebrow">Ručne vyrobené</p>
+      <h1>Náramky<br>s vlastným<br>príbehom.</h1>
+      <p class="hero-copy">Každý kus vzniká ručne, s dôrazom na materiál, detail a správnu veľkosť.</p>
+      <div class="hero-actions">
+        <a href="#kolekcia" class="btn btn-primary">Prezrieť kolekciu</a>
+        <a href="#" class="btn-text" data-fb-link>Napísať na Facebook</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <!-- NÁHĽAD (Unsplash). Neskôr nahraď za images/hero.jpg -->
+      <img src="https://images.unsplash.com/photo-1611235116292-df7f928f3a0f?auto=format&fit=crop&q=80&w=1200&h=1500" alt="Ručne vyrobený korálkový náramok na zápästí" width="1200" height="1500" fetchpriority="high">
+    </div>
+  </section>
+
+  <!-- ============ BEŽIACI PÁSIK ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Ručne vyrobené ★ Veľkosť na mieru ★ Každý kúsok je iný ★ Objednaj cez Messenger ★ Ručne vyrobené ★ Veľkosť na mieru ★ Každý kúsok je iný ★ Objednaj cez Messenger ★ </span>
+      <span>Ručne vyrobené ★ Veľkosť na mieru ★ Každý kúsok je iný ★ Objednaj cez Messenger ★ Ručne vyrobené ★ Veľkosť na mieru ★ Každý kúsok je iný ★ Objednaj cez Messenger ★ </span>
+    </div>
+  </div>
+
+  <!-- ============ COLLECTION ============ -->
+  <section class="collection" id="kolekcia">
+    <div class="section-head">
+      <p class="eyebrow">Kolekcia</p>
+      <h2>Vyber si kúsok,<br>ktorý je tvoj.</h2>
+    </div>
+
+    <div class="filters" role="group" aria-label="Filtrovať kolekciu podľa kategórie">
+      <button class="filter-btn is-active" data-filter="všetky">Všetky</button>
+      <button class="filter-btn" data-filter="minerálne">Minerálne</button>
+      <button class="filter-btn" data-filter="korálkové">Korálkové</button>
+      <button class="filter-btn" data-filter="párové">Párové</button>
+      <button class="filter-btn" data-filter="limitky">Limitky</button>
+    </div>
+
+    <div class="product-grid" id="product-grid" aria-live="polite">
+      <!-- rendered by app.js -->
+    </div>
+  </section>
+
+  <!-- ============ STORY ============ -->
+  <section class="story" id="o-nas">
+    <div class="story-image">
+      <!-- NÁHĽAD (Unsplash). Neskôr nahraď za images/story.jpg -->
+      <img src="https://images.unsplash.com/photo-1646070107254-3713cec279c1?auto=format&fit=crop&q=80&w=1000&h=1250" alt="Škatuľa plná farebných korálok pripravených na výrobu náramkov" width="1000" height="1250" loading="lazy">
+    </div>
+    <div class="story-text">
+      <p class="eyebrow">O náramkoch</p>
+      <h2>Ručne. Pomaly.<br>S dôrazom na detail.</h2>
+      <p>Každý náramok vzniká ručne. Vyberáme materiály, kombinujeme ich podľa charakteru jednotlivých kúskov a veľkosť prispôsobujeme konkrétnemu človeku.</p>
+
+      <ul class="benefits">
+        <li><span class="benefit-num" aria-hidden="true">★</span><span class="benefit-label">100&nbsp;% ručná práca</span></li>
+        <li><span class="benefit-num" aria-hidden="true">★</span><span class="benefit-label">Kvalitné materiály</span></li>
+        <li><span class="benefit-num" aria-hidden="true">★</span><span class="benefit-label">Veľkosť na mieru</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="how" id="ako-objednat">
+    <div class="section-head">
+      <h2>Ako objednať?</h2>
+    </div>
+    <ol class="how-steps">
+      <li>
+        <span class="how-num">1</span>
+        <h3>Vyber si</h3>
+        <p>Prezri si kolekciu a nájdi svoj kúsok.</p>
+      </li>
+      <li>
+        <span class="how-num">2</span>
+        <h3>Napíš nám</h3>
+        <p>Klikni na Facebook alebo Messenger.</p>
+      </li>
+      <li>
+        <span class="how-num">3</span>
+        <h3>Dohodneme detaily</h3>
+        <p>Spoločne vyriešime veľkosť, doručenie a všetko potrebné.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ SOCIAL PROOF ============ -->
+  <section class="proof">
+    <p class="eyebrow">Vaše fotky</p>
+    <h2>Ukážte nám, ako nosíte svoj náramok.</h2>
+    <p class="proof-copy">Označte nás na Facebooku alebo Messengeri — radi vaše fotky pridáme sem.</p>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="final-cta" id="kontakt">
+    <h2>Našiel si svoj kúsok?</h2>
+    <p>Napíš nám.</p>
+    <a href="#" class="btn btn-primary btn-large" data-fb-link>Napísať na Facebook</a>
+  </section>
+
+</main>
+
+<!-- ============ PRODUCT MODAL ============ -->
+<div class="modal-overlay" id="modal-overlay" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" id="product-modal">
+    <button class="modal-close" id="modal-close" aria-label="Zavrieť">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="modal-body">
+      <div class="modal-image">
+        <img id="modal-img" src="" alt="" width="800" height="1000">
+      </div>
+      <div class="modal-info">
+        <p class="modal-badge" id="modal-badge"></p>
+        <h3 id="modal-title"></h3>
+        <p class="modal-desc" id="modal-desc"></p>
+        <dl class="modal-meta">
+          <div>
+            <dt>Materiál</dt>
+            <dd id="modal-material"></dd>
+          </div>
+          <div>
+            <dt>Veľkosť</dt>
+            <dd id="modal-size"></dd>
+          </div>
+        </dl>
+        <p class="modal-price" id="modal-price"></p>
+        <div class="modal-actions">
+          <a href="#" class="btn btn-primary" id="modal-cta">Chcem takýto</a>
+          <a href="#" class="btn-text" id="modal-messenger">Napísať na Messenger</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">Handmade Bracelets</div>
+
+    <nav class="footer-nav" aria-label="Navigácia v pätičke">
+      <a href="#kolekcia">Kolekcia</a>
+      <a href="#o-nas">O náramkoch</a>
+      <a href="#ako-objednat">Ako objednať</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <nav class="footer-social" aria-label="Sociálne siete">
+      <a href="#" data-fb-link>Facebook</a>
+      <a href="#" data-messenger-link>Messenger</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Handmade Bracelets</p>
+    <p>Objednávky prebiehajú priamo cez Facebook / Messenger.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script src="animacie.js"></script>
+</body>
+</html>

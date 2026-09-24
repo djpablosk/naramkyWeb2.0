@@ -17,8 +17,8 @@
   --mint: #A8EBCB;
   --focus: #E0245E;
 
-  --font-display: 'Fredoka', 'Nunito', system-ui, sans-serif;
-  --font-body: 'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'DM Sans', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   --line: 3px solid var(--text);
   --radius: 24px;

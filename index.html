@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title> Bracelets By Terezka — Ručne vyrobené náramky</title>
-<meta name="description" content="Ručne vyrobené náramky s vlastným príbehom. Minerálne, korálkové a párové kúsky, prispôsobené na mieru. Objednávky priamo cez Facebook a Messenger.">
+<title>Handmade By Terezka — Ručne vyrobené náramky, kľúčenky a podložky</title>
+<meta name="description" content="Ručne vyrobené náramky, kľúčenky, korálkové podložky a drobnosti s vlastným príbehom. Mená, farby aj veľkosť prispôsobíme tebe. Objednávky priamo cez Facebook a Messenger.">
 
 <!-- Canonical -->
 <link rel="canonical" href="https://djpablosk.github.io/naramkyWeb2.0/">
@@ -12,19 +12,19 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="sk_SK">
-<meta property="og:site_name" content="Handmade Bracelets">
-<meta property="og:title" content="Handmade Bracelets — Ručne vyrobené náramky">
-<meta property="og:description" content="Ručne vyrobené náramky s vlastným príbehom. Minerálne, korálkové a párové kúsky, prispôsobené na mieru.">
+<meta property="og:site_name" content="Handmade By Terezka">
+<meta property="og:title" content="Handmade By Terezka — Náramky, kľúčenky a podložky ručne">
+<meta property="og:description" content="Náramky, kľúčenky, korálkové podložky a drobnosti s vlastným príbehom. Farby, mená aj veľkosť na mieru.">
 <meta property="og:url" content="https://djpablosk.github.io/naramkyWeb2.0/">
 <meta property="og:image" content="https://djpablosk.github.io/naramkyWeb2.0/images/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Ručne vyrobené náramky — ukážka kolekcie">
+<meta property="og:image:alt" content="Ručne vyrobené náramky s farebnými kvietkami — ukážka tvorby">
 
 <!-- Twitter / X card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Handmade Bracelets — Ručne vyrobené náramky">
-<meta name="twitter:description" content="Ručne vyrobené náramky s vlastným príbehom, prispôsobené na mieru.">
+<meta name="twitter:title" content="Handmade By Terezka — Náramky, kľúčenky a podložky ručne">
+<meta name="twitter:description" content="Ručne vyrobené kúsky s vlastným príbehom, prispôsobené na mieru.">
 <meta name="twitter:image" content="https://djpablosk.github.io/naramkyWeb2.0/images/og-cover.jpg">
 
 <!-- Favicon -->
@@ -39,15 +39,38 @@
 
 <link rel="stylesheet" href="style.css">
 
+<!-- Nová sekcia "Čo vyrábam" — môžeš neskôr presunúť do style.css -->
+<style>
+.makes { padding: clamp(56px, 8vw, 110px) clamp(20px, 5vw, 64px); }
+.makes .section-head { margin-bottom: clamp(28px, 4vw, 48px); }
+.makes-grid {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: clamp(12px, 2vw, 24px);
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 900px) { .makes-grid { grid-template-columns: repeat(4, 1fr); } }
+.make-card { position: relative; overflow: hidden; border-radius: 22px; aspect-ratio: 4 / 5; background: #f3f0ea; }
+.make-card a { display: block; width: 100%; height: 100%; color: inherit; text-decoration: none; }
+.make-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.make-card a:hover img, .make-card a:focus-visible img { transform: scale(1.05); }
+.make-label {
+  position: absolute; left: 10px; right: 10px; bottom: 10px;
+  padding: 12px 14px; border-radius: 16px;
+  background: rgba(255,255,255,.92); backdrop-filter: blur(6px);
+}
+.make-label strong { display: block; font-size: 1rem; font-weight: 700; }
+.make-label span { display: block; margin-top: 2px; font-size: .85rem; opacity: .75; }
+</style>
+
 <!-- Structured data (JSON-LD) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Handmade Bracelets",
+  "name": "Handmade By Terezka",
   "url": "https://djpablosk.github.io/naramkyWeb2.0/",
   "image": "https://djpablosk.github.io/naramkyWeb2.0/images/og-cover.jpg",
-  "description": "Ručne vyrobené náramky s vlastným príbehom. Minerálne, korálkové a párové kúsky, prispôsobené na mieru.",
+  "description": "Ručne vyrobené náramky, kľúčenky, korálkové podložky a drobnosti s vlastným príbehom, prispôsobené na mieru.",
   "sameAs": [
     "https://www.facebook.com/",
     "https://m.me/"
@@ -62,11 +85,12 @@
 <!-- ============ HEADER ============ -->
 <header class="site-header" id="site-header">
   <div class="header-inner">
-    <a href="#hero" class="brand">Bracelets<br class="brand-break">By Terezka</a>
+    <a href="#hero" class="brand">Handmade<br class="brand-break">By Terezka</a>
 
     <nav class="primary-nav" aria-label="Hlavná navigácia">
-      <a href="#kolekcia">Kolekcia</a>
-      <a href="#o-nas">O nás</a>
+      <a href="#co-vyrabam">Čo vyrábam</a>
+      <a href="#o-nas">O tvorbe</a>
+      <a href="#z-dielne">Z dielne</a>
       <a href="#ako-objednat">Ako objednať</a>
       <a href="#kontakt">Kontakt</a>
       <a href="#" class="nav-fb" data-fb-link>Facebook</a>
@@ -82,8 +106,9 @@
 <!-- ============ MOBILE MENU ============ -->
 <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
   <nav aria-label="Mobilná navigácia">
-    <a href="#kolekcia">Kolekcia</a>
-    <a href="#o-nas">O nás</a>
+    <a href="#co-vyrabam">Čo vyrábam</a>
+    <a href="#o-nas">O tvorbe</a>
+    <a href="#z-dielne">Z dielne</a>
     <a href="#ako-objednat">Ako objednať</a>
     <a href="#kontakt">Kontakt</a>
     <a href="#" data-fb-link>Facebook</a>
@@ -100,11 +125,11 @@
     <span class="deco deco-dot" aria-hidden="true"></span>
     <div class="hero-text">
       <p class="eyebrow">Ručne vyrobené</p>
-      <h1>Náramky<br>s vlastným<br>príbehom.</h1>
-      <p class="hero-copy">Každý kus vzniká ručne, s dôrazom na materiál, detail a správnu veľkosť.</p>
+      <h1>Malé kúsky<br>s vlastným<br>príbehom.</h1>
+      <p class="hero-copy">Náramky, kľúčenky, podložky aj drobnosti z korálok. Každý kúsok vzniká ručne, s dôrazom na farby, detail a to, aby sedel presne tebe.</p>
       <div class="hero-actions">
-        <a href="#kolekcia" class="btn btn-primary">Chcem svoj náramok.</a>
-        <a href="#z-dielne" class="btn-text" data-fb-link>Pozri si Galériu</a>
+        <a href="#co-vyrabam" class="btn btn-primary">Chcem svoj kúsok.</a>
+        <a href="#z-dielne" class="btn-text">Pozri si Galériu</a>
       </div>
     </div>
     <div class="hero-image">
@@ -118,6 +143,40 @@
     </div>
   </div>
 -->
+
+  <!-- ============ ČO VYRÁBAM ============ -->
+  <section class="makes" id="co-vyrabam">
+    <div class="section-head">
+      <p class="eyebrow">Čo vyrábam</p>
+      <h2>Nielen náramky.<br>Vyber si, čo ti sedí.</h2>
+    </div>
+    <ul class="makes-grid">
+      <li class="make-card">
+        <a href="#z-dielne">
+          <img src="images/naramky.jpg" alt="Perličkové náramky s farebnými písmenkami" width="700" height="875" loading="lazy">
+          <div class="make-label"><strong>Náramky</strong><span>Perličkové, s menom aj s kvietkami</span></div>
+        </a>
+      </li>
+      <li class="make-card">
+        <a href="#z-dielne">
+          <img src="images/galeria-3.jpg" alt="Mätová kľúčenka s perličkami, mašľou a menom" width="700" height="875" loading="lazy">
+          <div class="make-label"><strong>Kľúčenky</strong><span>S mašľou a tvojím menom</span></div>
+        </a>
+      </li>
+      <li class="make-card">
+        <a href="#z-dielne">
+          <img src="images/galeria-2.jpg" alt="Pletené pútka v rôznych farbách" width="700" height="875" loading="lazy">
+          <div class="make-label"><strong>Pútka</strong><span>Pletené, v akejkoľvek farbe</span></div>
+        </a>
+      </li>
+      <li class="make-card">
+        <a href="#z-dielne">
+          <img src="images/obrazok6.jpeg" alt="Korálkové podložky, kvety a drobnosti z korálok na tráve" width="700" height="875" loading="lazy">
+          <div class="make-label"><strong>Podložky a drobnosti</strong><span>Pixel art z korálok</span></div>
+        </a>
+      </li>
+    </ul>
+  </section>
 
   <!-- ============ COLLECTION ============ --
   <section class="collection" id="kolekcia">
@@ -143,17 +202,17 @@
   <!-- ============ STORY ============ -->
   <section class="story" id="o-nas">
     <div class="story-image">
-      <img src="images/story.jpg" alt="Farebné ručne vyrobené náramky a korálkové ozdoby rozložené na tráve" width="900" height="1125" loading="lazy">
+      <img src="images/story.jpg" alt="Farebné ručne vyrobené náramky, podložky a korálkové ozdoby rozložené na tráve" width="900" height="1125" loading="lazy">
     </div>
     <div class="story-text">
-      <p class="eyebrow">O náramkoch</p>
+      <p class="eyebrow">O tvorbe</p>
       <h2>Ručne. Pomaly.<br>S dôrazom na detail.</h2>
-      <p>Každý náramok vzniká ručne. Vyberáme materiály, kombinujeme ich podľa charakteru jednotlivých kúskov a veľkosť prispôsobujeme presne tvojmu zápästiu.</p>
+      <p>Náramky, kľúčenky, podložky aj drobnosti z korálok. Všetko vzniká ručne, korálku po korálke. Farby a materiály vyberám podľa charakteru každého kúska a veľkosť, meno či motív prispôsobím tebe.</p>
 
       <ul class="benefits">
         <li><span class="benefit-num" aria-hidden="true">★</span><span class="benefit-label">100&nbsp;% ručná práca</span></li>
         <li><span class="benefit-num" aria-hidden="true">★</span><span class="benefit-label">Kvalitné materiály</span></li>
-        <li><span class="benefit-num" aria-hidden="true">★</span><span class="benefit-label">Veľkosť na mieru</span></li>
+        <li><span class="benefit-num" aria-hidden="true">★</span><span class="benefit-label">Farby, meno a veľkosť na mieru</span></li>
       </ul>
     </div>
   </section>
@@ -184,10 +243,10 @@
         <img src="images/obrazok6.jpeg" alt="Farebné ručne vyrobené náramky" width="700" height="875" loading="lazy">
       </li>
       <li class="gallery-item">
-        <img src="images/naramky.jpg" alt="Ručne vyrobené korálkové náramky v jemných farbách" width="700" height="875" loading="lazy">
+        <img src="images/naramky.jpg" alt="Ručne vyrobené korálkové náramky s farebnými písmenkami" width="700" height="875" loading="lazy">
       </li>
       <li class="gallery-item">
-        <img src="images/naramk2.jpg" alt="Farebné korálkové náramky pripravené na nosenie" width="700" height="875" loading="lazy">
+        <img src="images/naramk2.jpg" alt="Farebné perlové náramky pripravené na nosenie" width="700" height="875" loading="lazy">
       </li>
     </ul>
   </section>
@@ -201,7 +260,7 @@
       <li>
         <span class="how-num">1</span>
         <h3>Vyber si</h3>
-        <p>Prezri si kolekciu a nájdi svoj kúsok.</p>
+        <p>Prezri si tvorbu a nájdi svoj kúsok.</p>
       </li>
       <li>
         <span class="how-num">2</span>
@@ -211,7 +270,7 @@
       <li>
         <span class="how-num">3</span>
         <h3>Dohodneme detaily</h3>
-        <p>Spoločne vyriešime veľkosť, doručenie a všetko potrebné.</p>
+        <p>Spoločne vyriešime farby, meno, veľkosť, doručenie a všetko potrebné.</p>
       </li>
     </ol>
   </section>
@@ -219,15 +278,15 @@
   <!-- ============ SOCIAL PROOF ============ -->
   <section class="proof">
     <p class="eyebrow">Tvoje fotky</p>
-    <h2>Ukáž mi, ako nosíš svoj náramok.</h2>
-    <p class="proof-copy">Označ ma na Facebooku alebo Messengeri — rád tvoju fotku pridám sem.</p>
+    <h2>Ukáž mi, ako nosíš alebo používaš svoj kúsok.</h2>
+    <p class="proof-copy">Označ ma na Facebooku alebo Messengeri, rád tvoju fotku pridám sem.</p>
   </section>
 
   <!-- ============ FINAL CTA ============ -->
   <section class="final-cta" id="kontakt">
     <h2>Našiel si svoj kúsok?</h2>
-    <p>Napíš mi a do pár dní ho máš na zápästí.</p>
-    <a href="#" class="btn btn-primary btn-large" data-fb-link>Objednať si tento náramok</a>
+    <p>Napíš mi a do pár dní ho máš pri sebe.</p>
+    <a href="#" class="btn btn-primary btn-large" data-fb-link>Objednať si tento kúsok</a>
   </section>
 
 </main>
@@ -269,11 +328,11 @@
 <!-- ============ FOOTER ============ -->
 <footer class="site-footer">
   <div class="footer-inner">
-    <div class="footer-brand">Handmade Bracelets</div>
+    <div class="footer-brand">Handmade By Terezka</div>
 
     <nav class="footer-nav" aria-label="Navigácia v pätičke">
-      <a href="#kolekcia">Kolekcia</a>
-      <a href="#o-nas">O náramkoch</a>
+      <a href="#co-vyrabam">Čo vyrábam</a>
+      <a href="#o-nas">O tvorbe</a>
       <a href="#ako-objednat">Ako objednať</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
@@ -284,7 +343,7 @@
     </nav>
   </div>
   <div class="footer-bottom">
-    <p>&copy; 2026 Handmade Bracelets</p>
+    <p>&copy; 2026 Handmade By Terezka</p>
     <p>Objednávky prebiehajú priamo cez Facebook / Messenger.</p>
     <a href="mailto:kontakt.apweby@gmail.com">
     <p> Site Made By Alex Ozaniak & Patrik Smržo</p> 
@@ -295,4 +354,4 @@
 <script src="app.js"></script>
 <script src="animacie.js"></script>
 </body>
-</html> 
+</html>

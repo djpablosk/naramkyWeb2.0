@@ -12,7 +12,7 @@
     });
   }, { threshold: 0.15, rootMargin: "0px 0px -6% 0px" });
 
-  var reveal = ".section-head, .filters, .story-image, .story-text > .eyebrow, .story-text > h2, .story-text > p, .benefits li, .how-steps li, .proof, .final-cta h2, .final-cta p";
+  var reveal = ".section-head, .filters, .story-image, .gallery-item, .story-text > .eyebrow, .story-text > h2, .story-text > p, .benefits li, .how-steps li, .proof, .final-cta h2, .final-cta p";
   document.querySelectorAll(reveal).forEach(function (el) {
     el.classList.add("reveal");
     io.observe(el);

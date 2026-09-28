@@ -16,6 +16,7 @@
   --blue: #8AD0FF;
   --mint: #A8EBCB;
   --focus: #E0245E;
+  --beige: #F5F5DC;
 
   --font-display: 'DM Sans', system-ui, sans-serif;
   --font-body: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -913,7 +914,7 @@ body.modal-open { overflow: hidden; }
 /* --- bežiaci pásik pod úvodom --- */
 .marquee {
   overflow: hidden;
-  background: var(--pink);
+  background: var(--beige);
   border-bottom: var(--line);
   padding: 12px 0;
   white-space: nowrap;

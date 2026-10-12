@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 — Stránka sa nenašla | Handmade By Terezka</title>
+<meta name="description" content="Táto stránka neexistuje alebo sa presunula. Vráť sa na úvod Handmade By Terezka.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#FFD84A">
+
+<!-- 404 sa zobrazuje aj na hlbokých adresách (/nieco/nieco/), preto nastavíme <base>,
+     aby sa style.css, favicon aj odkazy vždy načítali z koreňa webu.
+     Na GitHub Pages (project site) je koreň /naramkyWeb2.0/, na vlastnej doméne je to /. -->
+<script>
+(function () {
+  var base = location.pathname.indexOf("/naramkyWeb2.0/") === 0 ? "/naramkyWeb2.0/" : "/";
+  document.write('<base href="' + base + '">');
+})();
+</script>
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+/* ---------- 404 stránka ---------- */
+body { min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; display: flex; }
+
+.err {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(48px, 8vw, 100px) var(--container-pad);
+}
+.err > * { position: relative; z-index: 1; }
+
+/* korálky 4 0 4 — ako písmenkové korálky z náramkov */
+.beads {
+  display: flex;
+  justify-content: center;
+  gap: clamp(10px, 3vw, 24px);
+  margin: 0 0 clamp(28px, 5vw, 44px);
+}
+.bead {
+  width: clamp(84px, 22vw, 168px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(3rem, 12vw, 6.5rem);
+  line-height: 1;
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  animation: fadeUp 700ms var(--ease) both;
+}
+.bead-1 { background: var(--pink);   transform: rotate(-4deg); animation-delay: 0ms; }
+.bead-2 {
+  background: var(--yellow);
+  border-radius: 50%;
+  animation: fadeUp 700ms var(--ease) 120ms both, bob 4.5s ease-in-out 1s infinite;
+}
+.bead-3 { background: var(--blue);   transform: rotate(4deg);  animation-delay: 240ms; }
+.bead:hover { animation: wiggle 500ms ease-in-out; }
+
+.err h1 { max-width: 14ch; animation: fadeUp 700ms var(--ease) 320ms both; }
+.err .eyebrow { animation: fadeUp 700ms var(--ease) 280ms both; }
+.err-copy {
+  max-width: 46ch;
+  margin-top: 18px;
+  color: var(--muted);
+  animation: fadeUp 700ms var(--ease) 420ms both;
+}
+.err-actions {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px 28px;
+  animation: fadeUp 700ms var(--ease) 520ms both;
+}
+
+/* rýchle odkazy */
+.err-links {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  animation: fadeUp 700ms var(--ease) 620ms both;
+}
+.err-links a {
+  padding: 6px 18px;
+  font-weight: 500;
+  border: 2px solid var(--text);
+  border-radius: 999px;
+  background: var(--surface);
+  transition: transform 150ms var(--ease), background 150ms var(--ease);
+}
+.err-links a:nth-child(5n+1):hover { background: var(--yellow); }
+.err-links a:nth-child(5n+2):hover { background: var(--pink); }
+.err-links a:nth-child(5n+3):hover { background: var(--blue); }
+.err-links a:nth-child(5n+4):hover { background: var(--mint); }
+.err-links a:nth-child(5n+5):hover { background: var(--pink-soft); }
+.err-links a:hover { transform: translateY(-2px) rotate(-2deg); }
+
+/* ozdoby na pozadí */
+.err .deco-star   { top: 12%; left: 7%; right: auto; font-size: 38px; }
+.err .deco-star-2 { top: auto; bottom: 14%; left: auto; right: 9%; font-size: 30px; }
+.err .deco-ring   { top: 14%; right: 8%; width: 52px; height: 52px; }
+.err .deco-dot    { display: block; bottom: 12%; left: 8%; width: 44px; height: 44px; }
+@media (max-width: 640px) {
+  .err .deco-dot, .err .deco-ring { display: none; }
+}
+
+/* pätička — jednoduchá, bez navigácie */
+.site-footer.is-simple { padding-top: 32px; }
+.site-footer.is-simple .footer-bottom { margin-top: 0; border-top: 0; padding-top: 0; }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#hlavny-obsah">Preskočiť na obsah</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="./" class="brand">Handmade<br class="brand-break">By Terezka</a>
+    <nav class="primary-nav" aria-label="Hlavná navigácia">
+      <a href="./#co-vyrabam">Čo vyrábam</a>
+      <a href="./#o-nas">O tvorbe</a>
+      <a href="./#z-dielne">Z dielne</a>
+      <a href="./#ako-objednat">Ako objednať</a>
+      <a href="./#kontakt">Kontakt</a>
+    </nav>
+    <a href="./" class="btn btn-primary menu-home">Domov</a>
+  </div>
+</header>
+
+<main id="hlavny-obsah">
+  <section class="err">
+    <span class="deco deco-star" aria-hidden="true">★</span>
+    <span class="deco deco-star deco-star-2" aria-hidden="true">✦</span>
+    <span class="deco deco-ring" aria-hidden="true"></span>
+    <span class="deco deco-dot" aria-hidden="true"></span>
+
+    <div class="beads" aria-hidden="true">
+      <span class="bead bead-1">4</span>
+      <span class="bead bead-2">0</span>
+      <span class="bead bead-3">4</span>
+    </div>
+
+    <p class="eyebrow">Chyba 404</p>
+    <h1>Ups, tento kúsok sa nenašiel.</h1>
+    <p class="err-copy">Stránka, ktorú hľadáš, neexistuje alebo sa presunula. Vráť sa na úvod, alebo si pozri, čo všetko vyrábam.</p>
+
+    <div class="err-actions">
+      <a href="./" class="btn btn-primary btn-large">Späť na úvod</a>
+      <a href="./#z-dielne" class="btn-text">Pozri si Galériu</a>
+    </div>
+
+    <nav class="err-links" aria-label="Rýchle odkazy">
+      <a href="./#co-vyrabam">Čo vyrábam</a>
+      <a href="./#o-nas">O tvorbe</a>
+      <a href="./#z-dielne">Z dielne</a>
+      <a href="./#ako-objednat">Ako objednať</a>
+      <a href="./#kontakt">Kontakt</a>
+    </nav>
+  </section>
+</main>
+
+<footer class="site-footer is-simple">
+  <div class="footer-bottom">
+    <p>&copy; 2026 Handmade By Terezka</p>
+    <p>Objednávky prebiehajú priamo cez Facebook / Messenger.</p>
+  </div>
+</footer>
+
+</body>
+</html>
